@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "portfolioflm"
+  },
+  "targets": {
+    "portfolioflm": {
+      "hosting": {
+        "portfoliowebapp": [
+          "portfolioflm"
+        ]
+      }
+    }
+  }
+}

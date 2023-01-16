@@ -1,0 +1,30 @@
+<div class="container" *ngIf="person">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="person.name" required>
+                </div>
+                <div class="form-group">
+                    <label for="surname">Apellido</label>
+                    <input type="text" class="form-control" id="surname" name="surname" [(ngModel)]="person.surname" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <input type="text" class="form-control" id="description" name="description" [(ngModel)]="person.description" required>
+                </div>
+                <div class="form-group">
+                    <label for="img">Descripcion de sus estudios</label>
+                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="person.img" (change)="uploadImg($event)" accept=".jpg, .jpeg, .png">
+                </div>
+                <div class="img">
+                    <img [src]="imageService.url" width="200px">
+                </div>
+                <button class="btn btn-primary">
+                    Editar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

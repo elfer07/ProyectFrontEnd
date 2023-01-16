@@ -1,0 +1,38 @@
+.row {
+    padding: 20px;
+}
+
+div {
+    background-color: #a1b5cb;
+}
+
+/* show name */
+#name {
+    font-weight: bold;
+    margin-top: 30%;
+    margin-left: 10px;
+}
+
+/* profile image */
+@media (min-width: 576px) {
+    #profile-photo {
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px gray;
+    }
+
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 575px) {
+    #profile-photo {
+        position: absolute;
+        width: 30%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px gray;
+        left: 33%;
+        top: 950px;
+    }
+}
