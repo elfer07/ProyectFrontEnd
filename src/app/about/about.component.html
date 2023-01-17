@@ -1,21 +1,23 @@
-<div>
-        <button type="button" class="btn btn-primary" routerLink="/editabout/1" *ngIf="isLogged">
-            Editar Persona
-        </button>
-</div>
 <div class="row">
 
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img id="profile-photo" src="{{person.img}}" class="img-fluid" alt="Foto Perfil">
+        <figure class="figure">
+            <img id="profile-photo" src="{{person.img}}" class="figure-img img-fluid rounded" alt="Foto Perfil">            
+            <button type="button" class="btn btn-primary" routerLink="/editabout/1" *ngIf="isLogged">
+                <i class="bi bi-pencil-fill"></i>Editar
+            </button>
+        </figure>
     </div>
+
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p id="name">{{person.name}} {{person.surname}}</p>
-        
+        <h3 id="name" class="name">{{person.name}} {{person.surname}}</h3>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 about">
+
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
             <h1>Acerca de mi</h1>
             <p>{{person.description}}</p>
         </span>
+        
     </div>
 </div>

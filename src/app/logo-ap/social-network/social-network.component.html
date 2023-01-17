@@ -1,0 +1,17 @@
+<div class="container">
+    <br>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="linkNetwork">Link de Red Social: {{socialNetwork.name}}</label>
+                    <input type="text" class="form-control" id="linkNetwork" name="linkNetwork" [(ngModel)]="socialNetwork.linkNetwork" required>
+                </div>
+                <br>
+                <button class="btn btn-primary">
+                    Agregar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

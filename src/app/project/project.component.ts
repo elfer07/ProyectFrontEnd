@@ -26,7 +26,9 @@ export class ProjectComponent implements OnInit {
   }
 
   uploadProject(): void {
-    this.projService.lista().subscribe(data => { this.proj = data; })
+    this.projService.lista().subscribe(data => { 
+      this.proj = data;
+     })
   }
 
   delete(id?: number){

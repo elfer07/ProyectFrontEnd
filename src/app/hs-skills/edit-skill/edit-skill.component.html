@@ -1,4 +1,5 @@
 <div class="container" *ngIf="skill">
+    <br>
     <div class="row">
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
@@ -10,6 +11,7 @@
                     <label for="porcentaje">Ingrese el porcentaje</label>
                     <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
                 </div>
+                <br>
                 <button class="btn btn-primary">
                     Actualizar
                 </button>

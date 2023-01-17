@@ -8,27 +8,33 @@
     </div>
 
     <div class="container">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Project of proj">
-                    <img id="photo-project" src="{{Project.image}}" class="img-fluid">
-                    <td>
-                        <h2>{{Project.title}}</h2>
-                    </td>
-                    <td>
-                        {{Project.description}}
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editproject/{{Project.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Project.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
-                    </td>
-                </tr>
-            </tbody>
-
-        </table>
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr *ngFor="let Project of proj">
+                            <td>
+                                <a [href]="Project.link" target="_blank"><img id="photo-project" src="{{Project.image}}" class="img-fluid" width="200px"></a>
+                            </td>
+                            <td>
+                                <h2>{{Project.title}}</h2>
+                            </td>
+                            <td>
+                                <p>{{Project.description}}</p>
+                            </td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-light" routerLink="/editproject/{{Project.id}}">
+                                    <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                            </td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-danger" (click)="delete(Project.id)">
+                                    <i class="bi bi-trash-fill"></i> BORRAR</button>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+            </table>
+            </div>
+        </div>
     </div>
 </div>

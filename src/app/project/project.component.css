@@ -2,10 +2,7 @@
     padding: 20px;
     background-color: #a1b5cd;
 }
-.container {
-    width: auto;
 
-}
 
 .parte1, .parte2 {
     display: inline-block;

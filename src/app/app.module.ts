@@ -30,6 +30,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { ProjectComponent } from './project/project.component';
 import { NewProjectComponent } from './project/new-project/new-project.component';
 import { EditProjectComponent } from './project/edit-project/edit-project.component';
+import { SocialNetworkComponent } from './logo-ap/social-network/social-network.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { EditProjectComponent } from './project/edit-project/edit-project.compon
     EditAboutComponent,
     ProjectComponent,
     NewProjectComponent,
-    EditProjectComponent
+    EditProjectComponent,
+    SocialNetworkComponent
   ],
   imports: [
     BrowserModule,
