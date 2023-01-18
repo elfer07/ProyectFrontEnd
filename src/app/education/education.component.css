@@ -3,9 +3,24 @@
 }
 
 div {
-    background: #a1b5cb;
+    background: #212121;
 }
 
 h1, h3 {
     display: inline;
+}
+
+.text-title {
+    font-size: calc(1.25em + 1.25vw);
+    color: white;
+}
+
+.text {
+    font-size: calc(1em + 1vw);
+    color: white;
+}
+
+.sub-text {
+    font-size: calc(0.75em + 0.75vw);
+    color: white;
 }

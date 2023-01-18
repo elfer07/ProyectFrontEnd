@@ -1,29 +1,30 @@
 <div class="row">
-    <h1>Educación</h1>
+    <h1 class="text-title">Educación</h1>
 
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/neweducation" *ngIf="isLogged">
-            Nueva Educación
-        </button>
+        <button type="button" class="btn btn-primary" routerLink="/neweducation" *ngIf="isLogged">Agregar Educación</button>
     </div>
 
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
+    <div >
         <table class="table table-striped">
             <tbody>
                 <tr *ngFor="let Education of education">
                     <td>
-                        <h2>{{Education.nombreE}}</h2>
+                        <p class="text">{{Education.nombreE}}</p>
                     </td>
-                    <td>{{Education.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editedu/{{Education.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    <td>
+                        <p class="sub-text">{{Education.descripcionE}}</p>
                     </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Education.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
-                    </td>
+                    <div>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editedu/{{Education.id}}">
+                                <i class="bi bi-pencil-fill"></i></button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Education.id)">
+                                <i class="bi bi-trash-fill"></i></button>
+                        </td>
+                    </div>
                 </tr>
             </tbody>
         </table>

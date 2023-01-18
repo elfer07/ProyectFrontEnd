@@ -1,29 +1,30 @@
 <div class="row">
-    <h1>Experiencia Laboral</h1>
+    <h1 class="text-title">Experiencia Laboral</h1>
 
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/newexp" *ngIf="isLogged">
-            Nueva Experiencia
-        </button>
+        <button type="button" class="btn btn-primary" routerLink="/newexp" *ngIf="isLogged">Agregar Experiencia</button>
     </div>
 
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
+    <div>
         <table class="table table-striped">
             <tbody>
                 <tr *ngFor="let Experience of exp">
                     <td>
-                        <h2>{{Experience.nombreE}}</h2>
+                        <p class="text">{{Experience.nombreE}}</p>
                     </td>
-                    <td>{{Experience.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editexp/{{Experience.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    <td>
+                        <p class="sub-text">{{Experience.descripcionE}}</p>
                     </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Experience.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
-                    </td>
+                    <div>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editexp/{{Experience.id}}">
+                                <i class="bi bi-pencil-fill"></i></button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Experience.id)">
+                                <i class="bi bi-trash-fill"></i></button>
+                        </td>
+                    </div>                    
                 </tr>
             </tbody>
         </table>

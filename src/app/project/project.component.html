@@ -1,10 +1,8 @@
 <div class="row">
-    <h1>Proyectos Realizados</h1>
+    <h1 class="text-title">Proyectos Realizados</h1>
 
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/newproject" *ngIf="isLogged">
-            Nuevo Proyecto
-        </button>
+        <button type="button" class="btn btn-primary" routerLink="/newproject" *ngIf="isLogged">Agregar Proyecto</button>
     </div>
 
     <div class="container">
@@ -14,23 +12,24 @@
                     <tbody>
                         <tr *ngFor="let Project of proj">
                             <td>
-                                <a [href]="Project.link" target="_blank"><img id="photo-project" src="{{Project.image}}" class="img-fluid" width="200px"></a>
+                                <a [href]="Project.link" target="_blank"><img id="photo-project" src="{{Project.image}}" class="img-fluid" width="200.em"></a>
                             </td>
                             <td>
-                                <h2>{{Project.title}}</h2>
+                                <p class="text">{{Project.title}}</p>
                             </td>
                             <td>
-                                <p>{{Project.description}}</p>
+                                <p class="sub-text">{{Project.description}}</p>
                             </td>
-                            <td *ngIf="isLogged">
-                                <button class="btn btn-light" routerLink="/editproject/{{Project.id}}">
-                                    <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                            </td>
-                            <td *ngIf="isLogged">
-                                <button class="btn btn-danger" (click)="delete(Project.id)">
-                                    <i class="bi bi-trash-fill"></i> BORRAR</button>
-                            </td>
-                            
+                            <div>
+                                <td *ngIf="isLogged">
+                                    <button class="btn btn-light" routerLink="/editproject/{{Project.id}}">
+                                        <i class="bi bi-pencil-fill"></i></button>
+                                </td>
+                                <td *ngIf="isLogged">
+                                    <button class="btn btn-danger" (click)="delete(Project.id)">
+                                        <i class="bi bi-trash-fill"></i></button>
+                                </td>
+                            </div>                            
                         </tr>
                     </tbody>
             </table>

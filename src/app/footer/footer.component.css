@@ -1,12 +1,16 @@
 .row {
-    background-color: #a1b5cd;
+    background-color: #212121;
 }
 
 footer {
-    color: gainsboro;
-    font-size: 20px;
+    color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
-    box-shadow: 2px 2px 5px paleturquoise ;
+    box-shadow: 2px 2px 5px white ;
+}
+
+.text {
+    font-size: calc(0.50em + 0.50vw);
+    color: white;
 }

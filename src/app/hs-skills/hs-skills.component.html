@@ -1,8 +1,8 @@
 <div class="row">
 
-    <h1>Habilidades</h1>
+    <h1 class="text-title">Habilidades</h1>
     <div class="col-lg-2">
-        <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Agregar habilidad</button>
+        <button type="button" routerLink="/newskill" class="btn btn-primary" *ngIf="isLogged">Agregar habilidad</button>
     </div> 
 
     <div class="container">
@@ -12,7 +12,7 @@
                 [percent]="(skill.porcentaje)" 
                 [radius]="90" [imageSrc]="''" 
                 [title]="(skill.nombre)"
-                [titleColor]="'#212F3C'"
+                [titleColor]="'#fff'"
                 [showTitle]="true" 
                 [showImage]="false" 
                 [imageHeight]="70" 
@@ -21,8 +21,8 @@
                 [showSubtitle]="false" 
                 [outerStrokeWidth]="16" 
                 [innerStrokeWidth]="2" 
-                [outerStrokeColor]="'#78C000'"
-                [innerStrokeColor]="'#C7E596'" 
+                [outerStrokeColor]="'#dad7cd'"
+                [innerStrokeColor]="'#d8f3dc'" 
                 [animation]="true" 
                 [animationDuration]="600">
                 </circle-progress>

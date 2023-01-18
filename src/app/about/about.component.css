@@ -3,25 +3,34 @@
 }
 
 div {
-    background-color: #a1b5cb;
+    background-color: #212121;
 }
 
+.name {
+    text-align: center;
+    color: white;
+    font-size: calc(1em + 1vw);
+    justify-content: center;
+}
+
+.sub-text {
+    font-size: calc(0.75em + 0.75vw);
+    color: white;
+}
 
 
 /* profile image */
 @media (min-width: 576px) {
     #profile-photo {
         border-radius: 100%;
-        box-shadow: 3px 3px 3px gray;
+        box-shadow: 3px 3px 3px white;
     }
 
-    .name {
-        text-align: center;
-        justify-content: center;
-    }
+    
 
     .about {
         display: flex;
+        color: white;
         justify-content: center;
         align-items: center;
     }
@@ -31,13 +40,10 @@ div {
         position: absolute;
         width: 30%;
         border-radius: 100%;
-        box-shadow: 3px 3px 3px gray;
+        box-shadow: 3px 3px 3px white;
         left: 33%;
         top: 950px;
     }
 
-    .name {
-        text-align: center;
-        justify-content: center;
-    }
+    
 }

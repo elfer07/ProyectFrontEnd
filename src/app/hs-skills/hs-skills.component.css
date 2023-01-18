@@ -1,5 +1,5 @@
 .row {
-    background-color: #a1b5cd;
+    background-color: #212121;
     padding: 20px;
 }
 
@@ -7,4 +7,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.text-title {
+    font-size: calc(1.25em + 1.25vw);
+    color: white;
+}
+
+.text {
+    font-size: calc(1em + 1vw);
+    color: white;
+}
+
+.sub-text {
+    font-size: calc(0.75em + 0.75vw);
+    color: white;
 }

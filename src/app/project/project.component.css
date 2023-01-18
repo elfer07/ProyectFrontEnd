@@ -1,6 +1,6 @@
 .row {
-    padding: 20px;
-    background-color: #a1b5cd;
+    padding: 10px;
+    background-color: #212121;
 }
 
 
@@ -10,5 +10,20 @@
 }
 
 .img-project {
-    box-shadow: 10px 10px 30px black;
+    box-shadow: 10px 10px 30px white;
+}
+
+.text-title {
+    font-size: calc(1.25em + 1.25vw);
+    color: white;
+}
+
+.text {
+    font-size: calc(1em + 1vw);
+    color: white;
+}
+
+.sub-text {
+    font-size: calc(0.75em + 0.75vw);
+    color: white;
 }
